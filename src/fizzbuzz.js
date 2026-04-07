@@ -9,23 +9,27 @@
  */
 
 function fizzbuzz(linesToPrint) {
-    let listOfNumbers = [];
+    let fizzBuzzList = [];
     for (let i = 1; i <= linesToPrint; i++) {
-        if (i % 3 === 0 ) {
-            listOfNumbers.push('fizz');
-        } else {
-             listOfNumbers.push(i);
-        }
+        fizzBuzzList.push(oneFizzbuzz(i));
     }
 
-    // let i = 1;
-    // while (i <= linesToPrint) {
-    //     listOfNumbers.push(i);
-    //     i = i + 2;
-    // }
-    return listOfNumbers;
+    return fizzBuzzList;
 }
+
+function oneFizzbuzz(i) {
+    if (i % 5 === 0 && i % 3 === 0) {
+        return 'fizzbuzz';
+    } else if (i % 3 === 0 ) {
+        return 'fizz';
+    } else if (i % 5 === 0) {
+        return 'buzz';
+    } else {
+        return i;
+    }
+}
+
 module.exports = {
-    fizzbuzz
+    fizzbuzz, oneFizzbuzz
 }
 
