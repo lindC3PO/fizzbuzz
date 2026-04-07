@@ -11,7 +11,11 @@
 function fizzbuzz(linesToPrint) {
     let listOfNumbers = [];
     for (let i = 1; i <= linesToPrint; i++) {
-        listOfNumbers.push(i);
+        if (i % 3 === 0 ) {
+            listOfNumbers.push('fizz');
+        } else {
+             listOfNumbers.push(i);
+        }
     }
 
     // let i = 1;
@@ -24,3 +28,4 @@ function fizzbuzz(linesToPrint) {
 module.exports = {
     fizzbuzz
 }
+
