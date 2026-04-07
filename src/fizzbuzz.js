@@ -8,3 +8,19 @@
  * For multiples of both 3 and 5 print FizzBuzz instead of the number
  */
 
+function fizzbuzz(linesToPrint) {
+    let listOfNumbers = [];
+    for (let i = 1; i <= linesToPrint; i++) {
+        listOfNumbers.push(i);
+    }
+
+    // let i = 1;
+    // while (i <= linesToPrint) {
+    //     listOfNumbers.push(i);
+    //     i = i + 2;
+    // }
+    return listOfNumbers;
+}
+module.exports = {
+    fizzbuzz
+}
